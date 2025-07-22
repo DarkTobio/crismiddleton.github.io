@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV - Nombre Apellido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        header:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #666;
+            border: 5px solid #667eea;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            background: rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover, .project-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(5px);
+        }
+
+        .item-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .item-company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border-top: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar {
+            width: 100px;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .languages {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 16px;
+            border-radius: 25px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header, .section {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="fade-in">
+            <div class="profile-img">👤</div>
+            <h1>Tu Nombre Completo</h1>
+            <p class="subtitle">Desarrollador Full Stack | Ingeniero de Software</p>
+            
+            <div class="contact-info">
+                <a href="mailto:tu@email.com" class="contact-item">
+                    📧 tu@email.com
+                </a>
+                <a href="tel:+56912345678" class="contact-item">
+                    📱 +56 9 1234 5678
+                </a>
+                <a href="https://linkedin.com/in/tuperfil" class="contact-item" target="_blank">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/tugithub" class="contact-item" target="_blank">
+                    💻 GitHub
+                </a>
+            </div>
+        </header>
+
+        <section class="section fade-in">
+            <h2>Sobre Mí</h2>
+            <p>Desarrollador apasionado con más de X años de experiencia en desarrollo web y móvil. Especializado en tecnologías modernas como React, Node.js y Python. Me gusta resolver problemas complejos y crear soluciones innovadoras que impacten positivamente en las empresas y usuarios.</p>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="experience-item">
+                <div class="item-title">Desarrollador Full Stack Senior</div>
+                <div class="item-company">Tech Company SpA</div>
+                <div class="item-date">Enero 2022 - Presente</div>
+                <p>Desarrollo y mantenimiento de aplicaciones web usando React, Node.js y MongoDB. Liderazgo de equipo de 3 desarrolladores junior. Implementación de metodologías ágiles y mejores prácticas de desarrollo.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-title">Desarrollador Frontend</div>
+                <div class="item-company">Digital Solutions Ltda</div>
+                <div class="item-date">Marzo 2020 - Diciembre 2021</div>
+                <p>Creación de interfaces de usuario responsive y accesibles. Colaboración con equipos de UX/UI para implementar diseños pixel-perfect. Optimización de performance y SEO.</p>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Educación</h2>
+            
+            <div class="education-item">
+                <div class="item-title">Ingeniería en Informática</div>
+                <div class="item-company">Universidad Tecnológica de Chile</div>
+                <div class="item-date">2016 - 2020</div>
+                <p>Titulado con distinción. Especialización en desarrollo de software y bases de datos.</p>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Habilidades Técnicas</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-item">
+                        <span>React</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>CSS/SASS</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-item">
+                        <span>Node.js</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Python</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>PostgreSQL</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="skill-item">
+                        <span>Git</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Docker</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>AWS</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Proyectos Destacados</h2>
+            
+            <div class="project-item">
+                <div class="item-title">E-commerce Platform</div>
+                <div class="item-date">2023</div>
+                <p>Plataforma completa de comercio electrónico desarrollada con React, Node.js y Stripe. Incluye panel de administración, gestión de inventario y sistema de pagos.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="item-title">Task Management App</div>
+                <div class="item-date">2022</div>
+                <p>Aplicación web de gestión de tareas con funcionalidades de colaboración en tiempo real usando Socket.io y MongoDB.</p>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Idiomas</h2>
+            <div class="languages">
+                <div class="language-item">Español - Nativo</div>
+                <div class="language-item">Inglés - Avanzado</div>
+                <div class="language-item">Portugués - Intermedio</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Animación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los elementos con animación
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.section');
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Efecto de hover en las barras de habilidades
+        document.querySelectorAll('.skill-progress').forEach(bar => {
+            bar.addEventListener('mouseenter', function() {
+                this.style.transform = 'scaleY(1.2)';
+            });
+            
+            bar.addEventListener('mouseleave', function() {
+                this.style.transform = 'scaleY(1)';
+            });
+        });
+    </script>
+</body>
+</html>
