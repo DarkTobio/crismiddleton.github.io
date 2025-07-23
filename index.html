@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional de Cristóbal Middleton, Ingeniero Civil Industrial y Data Scientist. Experiencia en BI, ML y análisis de datos.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cristobal Middleton | Data Scientist & Analytics</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+  html { scroll-behavior: smooth; }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -136,54 +138,56 @@
       font-size: 14px;
     }
 
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      padding: 0.75rem 1rem;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(71, 85, 105, 0.4);
-    }
+    
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.4);
+}
 
-    nav a {
-      padding: 0.5rem 1rem;
-      background: rgba(51, 65, 85, 0.5);
-      border: 1px solid rgba(71, 85, 105, 0.3);
-      border-radius: 0.75rem;
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
+nav a {
+  padding: 0.5rem 1rem;
+  background: rgba(51, 65, 85, 0.5);
+  border: 1px solid rgba(71, 85, 105, 0.3);
+  border-radius: 0.75rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
 
-    nav a:hover {
-      background: rgba(59, 130, 246, 0.2);
-      border-color: rgba(59, 130, 246, 0.5);
-      transform: translateY(-2px);
-    }
+nav a:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
 
-    @media (max-width: 768px) {
-      nav {
-        overflow-x: auto;
-        justify-content: flex-start;
-        gap: 0.5rem;
-        margin-bottom: 2rem;
-      }
+@media (max-width: 768px) {
+  nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
 
-      nav a {
-        padding: 0.4rem 0.75rem;
-        font-size: 0.85rem;
-      }
-    }
+  nav a {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
 
     /* Main Content */
     .main-content {
@@ -476,11 +480,13 @@
 </head>
 <body>
   <div class="container">
+  <main role="main">
     <header>
       <div class="profile-section">
-        <div class="profile-image"></div>
+        <div class="profile-image" aria-hidden="true"></div>
+          <img src="profile.jpeg" alt="Foto de Cristóbal Middleton" style="display:none;" />
         <div class="profile-content">
-          <h1>Cristóbal Middleton</h1>
+          <h1>Cristóbal Middleton Frederick</h1>
           <p class="subtitle">Ingeniero Civil Industrial - Data Scientist</p>
           <p class="bio">
             Profesional responsable, detallista y creativo con experiencia en roles y rubros diversos. 
@@ -491,7 +497,7 @@
           <div class="contact-info">
             <a href="mailto:cristobalimf@gmail.com" class="contact-item">
               <span class="contact-icon">📧</span>
-              cristobalimf@gmail.com
+              Email
             </a>
             <a href="https://www.linkedin.com/in/cristobalmiddleton" target="_blank" class="contact-item">
               <span class="contact-icon">💼</span>
@@ -499,14 +505,14 @@
             </a>
             <a href="tel:+56933639109" class="contact-item">
               <span class="contact-icon">📱</span>
-              +569 3363 9109
+              Teléfono
             </a>
           </div>
         </div>
       </div>
     </header>
 
-    <nav>
+    <nav role="navigation" aria-label="Menú principal">
       <a href="#experience">Experiencia</a>
       <a href="#projects">Proyectos</a>
       <a href="#skills">Habilidades</a>
@@ -524,8 +530,8 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Data Scientist</div>
-              <div class="experience-company">Macal</div>
+              <h3 class="experience-title">Data Scientist</h3>
+              <h4 class="experience-company">Macal</h4>
             </div>
             <div class="experience-period">Ago/2021 - Actualidad</div>
           </div>
@@ -537,8 +543,8 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Working Holiday Visa</div>
-              <div class="experience-company">Potts Point Hotel & Lamington National Park, Australia</div>
+              <h3 class="experience-title">Working Holiday Visa</h3>
+              <h4 class="experience-company">Potts Point Hotel & Lamington National Park, Australia</h4>
             </div>
             <div class="experience-period">Jul/2023 - Jun/2024</div>
           </div>
@@ -550,8 +556,8 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Product Manager BI</div>
-              <div class="experience-company">Macal</div>
+              <h3 class="experience-title">Product Manager BI</h3>
+              <h4 class="experience-company">Macal</h4>
             </div>
             <div class="experience-period">Jul/2021 - Abr/2023</div>
           </div>
@@ -563,8 +569,8 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Asesor de Gerencia</div>
-              <div class="experience-company">Los Parques S.A.</div>
+              <h3 class="experience-title">Asesor de Gerencia</h3>
+              <h4 class="experience-company">Los Parques S.A.</h4>
             </div>
             <div class="experience-period">Oct/2020 - May/2021</div>
           </div>
@@ -576,8 +582,8 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Analista de Inteligencia de Negocios</div>
-              <div class="experience-company">Los Parques S.A.</div>
+              <h3 class="experience-title">Analista de Inteligencia de Negocios</h3>
+              <h4 class="experience-company">Los Parques S.A.</h4>
             </div>
             <div class="experience-period">Jun/2019 - Sep/2020</div>
           </div>
@@ -589,8 +595,8 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Pasantía</div>
-              <div class="experience-company">Mercado Libre</div>
+              <h3 class="experience-title">Pasantía</h3>
+              <h4 class="experience-company">Mercado Libre</h4>
             </div>
             <div class="experience-period">Ago/2018 - Ene/2019</div>
           </div>
@@ -659,7 +665,7 @@
             <div>
               <div class="education-degree">Ingeniero Civil Industrial</div>
               <div class="education-institution">Universidad Adolfo Ibáñez</div>
-              <div class="education-details">Minor en Tecnologías de la Información</div>
+              <div class="education-details">Minor en Tecnologías de la Información</h4>
             </div>
             <div class="education-period">2014 - 2019</div>
           </div>
@@ -669,7 +675,7 @@
           <div class="education-header">
             <div>
               <div class="education-degree">International Baccalaureate Diploma (IBDP)</div>
-              <div class="education-institution">Saint Gabriel's School</div>
+              <div class="education-institution">Saint Gabriel's School</h4>
             </div>
             <div class="education-period">2000 - 2013</div>
           </div>
@@ -780,6 +786,7 @@
       </section>
     </div>
 
+  </main>
     <footer>
       <p>© 2025 Cristóbal Middleton. Construido con paciencia e IA. Principalmente IA.</p>
     </footer>
