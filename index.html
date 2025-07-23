@@ -59,6 +59,10 @@
       color: white;
       border: 3px solid rgba(59, 130, 246, 0.3);
       flex-shrink: 0;
+      background-image: url('profile.jpeg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
     }
 
     .profile-content {
@@ -339,6 +343,57 @@
       border: 1px solid rgba(34, 197, 94, 0.3);
     }
 
+    /* Education */
+    .education-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .education-degree {
+      font-weight: 600;
+      color: #3b82f6;
+      font-size: 1.1rem;
+    }
+
+    .education-institution {
+      font-weight: 500;
+      color: #e2e8f0;
+      margin-bottom: 0.25rem;
+    }
+
+    .education-period {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .education-details {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    /* About */
+    .about-content {
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .container {
@@ -401,26 +456,28 @@
   <div class="container">
     <header>
       <div class="profile-section">
-        <div class="profile-image">CMF</div>
+        <div class="profile-image"></div>
         <div class="profile-content">
-          <h1>Cristóbal Middleton Frederick</h1>
-          <p class="subtitle">Data Scientist & Analytics Professional</p>
+          <h1>Cristóbal Middleton</h1>
+          <p class="subtitle">Ingeniero Civil Industrial - Data Scientist</p>
           <p class="bio">
-            Profesional con 4+ años de experiencia transformando datos en insights accionables. 
-            Especializado en machine learning, análisis predictivo y desarrollo de soluciones de inteligencia de negocio.
+            Profesional responsable, detallista y creativo con experiencia en roles y rubros diversos. 
+            Especializado en abordar problemas de negocios con un enfoque analítico y orientado a la ciencia de datos. 
+            Autodidacta y curioso, siempre busco aprender y mejorar. Apasionado por los desafíos, 
+            disfruto la tecnología, el deporte, la lectura, los juegos y vivir nuevas experiencias.
           </p>
           <div class="contact-info">
             <a href="mailto:cristobalimf@gmail.com" class="contact-item">
               <span class="contact-icon">📧</span>
-              Email
+              cristobalimf@gmail.com
             </a>
-            <a href="https://www.linkedin.com/in/cristobal-middleton-94656513a/" target="_blank" class="contact-item">
+            <a href="https://www.linkedin.com/in/cristobalmiddleton" target="_blank" class="contact-item">
               <span class="contact-icon">💼</span>
               LinkedIn
             </a>
-            <a href="https://github.com/cris-middleton" target="_blank" class="contact-item">
-              <span class="contact-icon">⚡</span>
-              GitHub
+            <a href="tel:+56933639109" class="contact-item">
+              <span class="contact-icon">📱</span>
+              +569 3363 9109
             </a>
           </div>
         </div>
@@ -432,6 +489,7 @@
       <a href="#projects">Proyectos</a>
       <a href="#skills">Habilidades</a>
       <a href="#education">Educación</a>
+      <a href="#about">Sobre mí</a>
     </nav>
 
     <div class="main-content">
@@ -444,45 +502,78 @@
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Senior Data Scientist</div>
-              <div class="experience-company">TechCorp Analytics</div>
+              <div class="experience-title">Data Scientist</div>
+              <div class="experience-company">Macal</div>
             </div>
-            <div class="experience-period">2022 - Presente</div>
+            <div class="experience-period">Ago/2021 - Actualidad</div>
           </div>
           <p class="experience-description">
-            Liderazgo de proyectos de machine learning end-to-end. Desarrollo de modelos predictivos 
-            que incrementaron la eficiencia operacional en 25%. Gestión de equipos multidisciplinarios 
-            y comunicación de resultados a stakeholders ejecutivos.
+            Desarrollo de modelos predictivos de ML: proyección de montos de venta y estimación de budget óptimo de inversión en campañas para conversión de clientes en marketing. Desarrollo de modelo de homologación de textos con inyección de datos de API. Puesta en producción y mantención de modelos desarrollados. Apoyo en automatización de procesos y proyecciones comerciales.
           </p>
         </div>
 
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Data Analyst</div>
-              <div class="experience-company">DataInsights Solutions</div>
+              <div class="experience-title">Working Holiday Visa</div>
+              <div class="experience-company">Potts Point Hotel & Lamington National Park, Australia</div>
             </div>
-            <div class="experience-period">2020 - 2022</div>
+            <div class="experience-period">Jul/2023 - Jun/2024</div>
           </div>
           <p class="experience-description">
-            Análisis de datos complejos y desarrollo de dashboards interactivos. 
-            Automatización de procesos de reporting, reduciendo tiempo de generación 
-            de informes en 70%. Colaboración estrecha con equipos de producto y marketing.
+            Experiencia internacional de trabajo y viaje en Australia, desarrollando habilidades de adaptabilidad, comunicación intercultural y trabajo en equipo en un entorno multicultural.
           </p>
         </div>
 
         <div class="experience-item">
           <div class="experience-header">
             <div>
-              <div class="experience-title">Business Intelligence Analyst</div>
-              <div class="experience-company">Retail Analytics Inc.</div>
+              <div class="experience-title">Product Manager BI</div>
+              <div class="experience-company">Macal</div>
             </div>
-            <div class="experience-period">2019 - 2020</div>
+            <div class="experience-period">Jul/2021 - Abr/2023</div>
           </div>
           <p class="experience-description">
-            Desarrollo de métricas de negocio y análisis de tendencias de mercado. 
-            Creación de modelos de segmentación de clientes y análisis de comportamiento 
-            de consumidores utilizando SQL y Python.
+            Gestión de las líneas de productos de vehículos y servicios complementarios. Desarrollo e implementación de mejoras en la estrategia de pricing en base a resultados internos, demanda y análisis con información de mercado. Responsable del desarrollo continuo de los productos de autos, financieros y de seguros, buscando maximizar impacto en el negocio. Trabajo continuo con UX, UI e IT. Construcción de tableros, reportes y KPI's de seguimiento.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="experience-title">Asesor de Gerencia</div>
+              <div class="experience-company">Los Parques S.A.</div>
+            </div>
+            <div class="experience-period">Oct/2020 - May/2021</div>
+          </div>
+          <p class="experience-description">
+            Automatización de reportería y definición de KPI's. Facilitación de la información para área de operaciones (gobierno de datos). Supervisión del desarrollo de aplicación móvil, implementación y capacitación. Estudios de mercado, stock, precio-demanda, vida útil, presupuesto, entre otros. Diseño de estrategias comerciales para generación e implementación de campañas. Gestión de la fuerza de ventas del canal y supervisión de centro de telemarketing.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="experience-title">Analista de Inteligencia de Negocios</div>
+              <div class="experience-company">Los Parques S.A.</div>
+            </div>
+            <div class="experience-period">Jun/2019 - Sep/2020</div>
+          </div>
+          <p class="experience-description">
+            Trabajo analítico de cartera de clientes y prospectos: rediseño e implementación de campañas y estrategias comerciales en base a composición y características. Análisis de datos y búsqueda de insights de clientes y productos con foco en acciones. Apoyo en control de gestión, gobierno de datos y estudios varios. Proyectos en reformación de metodologías de trabajo de bases de prospectos, asignación de cartera y transformación digital para campañas de cartera de clientes.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="experience-title">Pasantía</div>
+              <div class="experience-company">Mercado Libre</div>
+            </div>
+            <div class="experience-period">Ago/2018 - Ene/2019</div>
+          </div>
+          <p class="experience-description">
+            Participación en proyectos de análisis de datos y apoyo en iniciativas de mejora de procesos en una de las principales plataformas de e-commerce de Latinoamérica.
           </p>
         </div>
       </section>
@@ -498,22 +589,10 @@
             <h4>Programación & Análisis</h4>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">R</span>
-              <span class="skill-tag">Pandas</span>
-              <span class="skill-tag">NumPy</span>
-              <span class="skill-tag">Scikit-learn</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>Machine Learning & AI</h4>
-            <div class="skill-tags">
-              <span class="skill-tag">TensorFlow</span>
-              <span class="skill-tag">PyTorch</span>
-              <span class="skill-tag">XGBoost</span>
-              <span class="skill-tag">Deep Learning</span>
-              <span class="skill-tag">NLP</span>
+              <span class="skill-tag">SQL Avanzado</span>
+              <span class="skill-tag">Prefect</span>
+              <span class="skill-tag">ML Flow</span>
+              <span class="skill-tag">MS Office Avanzado</span>
             </div>
           </div>
 
@@ -522,20 +601,92 @@
             <div class="skill-tags">
               <span class="skill-tag">Tableau</span>
               <span class="skill-tag">Power BI</span>
-              <span class="skill-tag">Matplotlib</span>
-              <span class="skill-tag">Seaborn</span>
-              <span class="skill-tag">Plotly</span>
+              <span class="skill-tag">Quicksight</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <h4>Cloud & Herramientas</h4>
+            <h4>Habilidades Blandas</h4>
             <div class="skill-tags">
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Jupyter</span>
-              <span class="skill-tag">Apache Spark</span>
+              <span class="skill-tag">Análisis de datos</span>
+              <span class="skill-tag">Resolución de problemas</span>
+              <span class="skill-tag">Comunicación efectiva</span>
+              <span class="skill-tag">Adaptabilidad</span>
+              <span class="skill-tag">Trabajo en equipo</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Idiomas</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Español Nativo</span>
+              <span class="skill-tag">Inglés C1</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2>
+          <span class="section-icon">🎓</span>
+          Educación
+        </h2>
+        
+        <div class="education-item">
+          <div class="education-header">
+            <div>
+              <div class="education-degree">Ingeniero Civil Industrial</div>
+              <div class="education-institution">Universidad Adolfo Ibáñez</div>
+              <div class="education-details">Minor en Tecnologías de la Información</div>
+            </div>
+            <div class="education-period">2014 - 2019</div>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="education-header">
+            <div>
+              <div class="education-degree">International Baccalaureate Diploma (IBDP)</div>
+              <div class="education-institution">Saint Gabriel's School</div>
+            </div>
+            <div class="education-period">2000 - 2013</div>
+          </div>
+        </div>
+
+        <div class="skill-category" style="margin-top: 1.5rem;">
+          <h4>Cursos y Certificaciones</h4>
+          <div style="color: #cbd5e1; line-height: 1.6; margin-top: 0.75rem;">
+            • Stanford Machine Learning Specialization (en curso)<br>
+            • Google Machine Learning Bootcamp (2022)<br>
+            • Certificado Scrum Foundation Professional<br>
+            • Python UC y DataCamp<br>
+            • Adobe Premiere Pro CC
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>
+          <span class="section-icon">👨‍💻</span>
+          Sobre mí
+        </h2>
+        
+        <div class="about-content">
+          <p style="margin-bottom: 1.5rem;">
+            Me considero una persona responsable, detallista y creativa. A lo largo de mi carrera he enfrentado desafíos en roles y rubros diversos, lo que me ha ayudado a ser un profesional adaptable con habilidades para abordar problemas de negocios, explorarlos e implementar soluciones basadas en un enfoque analítico y orientado a la ciencia de datos.
+          </p>
+          
+          <p style="margin-bottom: 1.5rem;">
+            Autodidacta y curioso, siempre busco aprender y mejorar. Apasionado por los desafíos, disfruto la tecnología, el deporte, la lectura, los juegos y vivir nuevas experiencias.
+          </p>
+
+          <div class="skill-category">
+            <h4>Experiencias Adicionales</h4>
+            <div style="color: #cbd5e1; line-height: 1.6; margin-top: 0.75rem;">
+              • Product Owner en Spurgeon<br>
+              • Participación en Desafío de programación RPA – EY<br>
+              • Tesorero federación de estudiantes – UAI<br>
+              • Certificación Open Waters PADI
             </div>
           </div>
         </div>
@@ -549,58 +700,58 @@
         
         <div class="projects-grid">
           <div class="project-card">
-            <h3 class="project-title">Sistema de Recomendación E-commerce</h3>
+            <h3 class="project-title">Modelos Predictivos de Ventas</h3>
             <p class="project-description">
-              Desarrollo de un sistema de recomendaciones híbrido utilizando collaborative filtering 
-              y content-based filtering. Incrementó las conversiones en 18% y mejoró la experiencia de usuario.
+              Desarrollo de modelos de machine learning para proyección de montos de venta en subastas de vehículos, 
+              optimizando la estimación de ingresos y mejorando la planificación comercial.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">ML Flow</span>
+              <span class="tech-tag">Prefect</span>
+              <span class="tech-tag">SQL</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3 class="project-title">Predicción de Demanda con Machine Learning</h3>
+            <h3 class="project-title">Optimización de Budget de Marketing</h3>
             <p class="project-description">
-              Modelo de forecasting para predecir demanda de productos utilizando series temporales 
-              y variables externas. Redujo el error de predicción en 35% comparado con métodos tradicionales.
+              Modelo predictivo para estimación de budget óptimo de inversión en campañas de marketing, 
+              maximizando la conversión de clientes y ROI de las campañas publicitarias.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">XGBoost</span>
-              <span class="tech-tag">Prophet</span>
+              <span class="tech-tag">Machine Learning</span>
               <span class="tech-tag">Tableau</span>
+              <span class="tech-tag">Power BI</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3 class="project-title">Dashboard de Análisis de Sentiment</h3>
+            <h3 class="project-title">Sistema de Homologación de Textos</h3>
             <p class="project-description">
-              Plataforma de análisis de sentiment en tiempo real para redes sociales utilizando NLP. 
-              Procesa 10K+ menciones diarias y genera insights automáticos para el equipo de marketing.
+              Desarrollo de modelo de homologación de textos con inyección de datos de API, 
+              automatizando la normalización y categorización de información de productos.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">NLTK</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">ML Flow</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3 class="project-title">Optimización de Precios Dinámicos</h3>
+            <h3 class="project-title">Estrategias de Pricing Dinámico</h3>
             <p class="project-description">
-              Algoritmo de pricing dinámico basado en análisis competitivo, demanda histórica y 
-              factores de mercado. Maximizó revenue en 22% manteniendo competitividad.
+              Implementación de mejoras en estrategias de pricing basadas en análisis de demanda, 
+              resultados internos e información de mercado para maximizar rentabilidad.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">Scikit-learn</span>
-              <span class="tech-tag">Apache Airflow</span>
-              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Análisis de Mercado</span>
+              <span class="tech-tag">BI</span>
             </div>
           </div>
         </div>
@@ -608,7 +759,7 @@
     </div>
 
     <footer>
-      <p>© 2025 Cristobal Middleton. Construido con paciencia e IA. Principalmente IA.</p>
+      <p>© 2025 Cristóbal Middleton. Construido con paciencia e IA. Principalmente IA.</p>
     </footer>
   </div>
 </body>
