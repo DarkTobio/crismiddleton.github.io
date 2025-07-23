@@ -156,7 +156,7 @@ nav {
 }
 
 nav a {
-  padding: 0.5rem 1rem;
+  padding: 0.65rem 1.25rem; /* antes: 0.5rem 1rem */
   background: rgba(51, 65, 85, 0.5);
   border: 1px solid rgba(71, 85, 105, 0.3);
   border-radius: 0.75rem;
@@ -164,7 +164,7 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 1.05rem;       /* antes: 0.95rem */
   white-space: nowrap;
 }
 
@@ -177,14 +177,18 @@ nav a:hover {
 @media (max-width: 768px) {
   nav {
     overflow-x: auto;
+    white-space: nowrap;
     justify-content: flex-start;
     gap: 0.5rem;
     margin-bottom: 2rem;
+    padding: 0.5rem 0;
+    -webkit-overflow-scrolling: touch;
   }
 
   nav a {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.85rem;
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -486,13 +490,12 @@ nav a:hover {
         <div class="profile-image" aria-hidden="true"></div>
           <img src="profile.jpeg" alt="Foto de Cristóbal Middleton" style="display:none;" />
         <div class="profile-content">
-          <h1>Cristóbal Middleton</h1>
-          <p class="subtitle">Ingeniero Civil Industrial - Data Scientist</p>
+          <h1 style="font-size: 2em;">Cristóbal Middleton</h1>
+          <p class="subtitle">Data Scientist - Ingeniero Civil Industrial</p>
           <p class="bio">
-            Profesional responsable, detallista y creativo con experiencia en roles y rubros diversos. 
-            Especializado en abordar problemas de negocios con un enfoque analítico y orientado a la ciencia de datos. 
-            Autodidacta y curioso, siempre busco aprender y mejorar. Apasionado por los desafíos, 
-            disfruto la tecnología, el deporte, la lectura, los juegos y vivir nuevas experiencias.
+            Curioso por defecto, analítico por elección.
+            He trabajado en rubros distintos, enfrentando desafíos muy variados, pero siempre con el mismo enfoque: entender el problema, darle mil vueltas y resolverlo con datos.
+            Soy autodidacta, detallista y creativo. Me entusiasma lo complejo, lo desconocido y todo lo que combine tecnología, lógica y un buen reto.
           </p>
           <div class="contact-info">
             <a href="mailto:cristobalimf@gmail.com" class="contact-item">
@@ -701,7 +704,11 @@ nav a:hover {
         
         <div class="about-content">
           <p style="margin-bottom: 1.5rem;">
-            Me considero una persona responsable, detallista y creativa. A lo largo de mi carrera he enfrentado desafíos en roles y rubros diversos, lo que me ha ayudado a ser un profesional adaptable con habilidades para abordar problemas de negocios, explorarlos e implementar soluciones basadas en un enfoque analítico y orientado a la ciencia de datos.
+            Me considero una persona responsable, detallista y creativa.
+            A lo largo de mi carrera he enfrentado desafíos en roles y rubros diversos, 
+            lo que me ha ayudado a ser un profesional adaptable con habilidades para 
+            abordar problemas de negocios, explorarlos e implementar soluciones basadas 
+            en un enfoque analítico y orientado a la ciencia de datos.
           </p>
           
           <p style="margin-bottom: 1.5rem;">
