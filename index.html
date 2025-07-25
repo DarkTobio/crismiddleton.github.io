@@ -849,21 +849,19 @@ nav a:hover {
 
 <script>
 // Contador automático de racha de Duolingo
-function updateDuolingoStreak() {
-  const startDate = new Date('2022-08-22'); // Fecha de inicio de tu racha actual (ajusta según corresponda)
-  const today = new Date();
-  const diffTime = Math.abs(today - startDate);
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 690; // 690 es tu racha base actual
-  
-  const streakElement = document.getElementById('duolingo-streak');
-  if (streakElement) {
-    streakElement.textContent = diffDays;
+  function updateDuolingoStreak() {
+    const startDate = new Date("2022-08-22"); // Ajusta esta fecha según el inicio real
+    const today = new Date();
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const streakElement = document.getElementById("duolingo-streak");
+    if (streakElement) {
+      streakElement.textContent = diffDays;
+    }
   }
-}
 
-// Actualizar al cargar la página
-updateDuolingoStreak();
+  updateDuolingoStreak();
 </script>
-
+  
 </body>
 </html>
