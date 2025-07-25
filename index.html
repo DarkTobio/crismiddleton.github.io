@@ -93,13 +93,12 @@
     }
 
     h1 {
-      font-size: 2.25rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     }
 
     .subtitle {
@@ -108,8 +107,6 @@
       margin-bottom: 1rem;
       font-weight: 500;
     }
-
-
 
     .contact-info {
       display: flex;
@@ -157,7 +154,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
   background: rgba(15, 23, 42, 0.95);
@@ -185,12 +182,13 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+
   nav {
     overflow-x: auto;
     white-space: nowrap;
     justify-content: flex-start;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding: 0.5rem 0;
     -webkit-overflow-scrolling: touch;
   }
@@ -434,10 +432,18 @@ nav a:hover {
       line-height: 1.7;
     }
 
+    .desktop-only {
+      display: inline;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .container {
         padding: 1rem;
+      }
+
+      .desktop-only {
+        display: none;
       }
 
       .profile-section {
@@ -460,7 +466,7 @@ nav a:hover {
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem !important;
       }
 
       .main-content {
@@ -500,7 +506,7 @@ nav a:hover {
         <div class="profile-image" aria-hidden="true"></div>
           <img src="images/profile.jpeg" alt="Foto de Cristóbal Middleton" style="display:none;" />
         <div class="profile-content">
-          <h1 style="font-size: 1.8em;">Cristóbal Middleton</h1>
+          <h1 style="font-size: 2.5em;">Cristóbal Middleton<span class="desktop-only"> Frederick</span></h1>
           <p class="subtitle">Data Scientist - Data Analyst<br> 
                               Ingeniero Civil Industrial</p>
           <p class="bio">
@@ -522,6 +528,17 @@ nav a:hover {
               Teléfono
             </a>
           </div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; justify-content: flex-start;">
+            <a href="CV/Cristobal_Middleton_CV_esp.pdf" target="_blank" class="contact-item" style="background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4);">
+              <span class="contact-icon">🇪🇸</span>
+              Español CV
+            </a>
+            <a href="CV/Cristobal_Middleton_CV_eng.pdf" target="_blank" class="contact-item" style="background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4);">
+              <span class="contact-icon">🇺🇸</span>
+              English CV
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -535,7 +552,8 @@ nav a:hover {
     </nav>
 
     <div class="main-content">
-      <section id="experience" class="section">
+      <!-- Experiencia Profesional - Solo, ancho completo -->
+      <section id="experience" class="section full-width">
         <h2>
           <span class="section-icon">💼</span>
           Experiencia Profesional
@@ -547,7 +565,7 @@ nav a:hover {
               <h3 class="experience-title">Data Scientist</h3>
               <h4 class="experience-company">Macal</h4>
             </div>
-            <div class="experience-period">Ago/2021 - Actualidad</div>
+            <div class="experience-period">Ago/2023 - Actualidad</div>
           </div>
           <p class="experience-description">
             Desarrollo de modelos predictivos de ML: proyección de montos de venta y estimación de budget óptimo de inversión en campañas para conversión de clientes en marketing. Desarrollo de modelo de homologación de textos con inyección de datos de API. Puesta en producción y mantención de modelos desarrollados. Apoyo en automatización de procesos y proyecciones comerciales.
@@ -619,7 +637,10 @@ nav a:hover {
           </p>
         </div>
       </section>
+    </div>
 
+    <!-- Habilidades y Educación en paralelo -->
+    <div class="main-content" style="margin-top: 2rem;">
       <section id="skills" class="section">
         <h2>
           <span class="section-icon">🛠️</span>
@@ -679,7 +700,7 @@ nav a:hover {
             <div>
               <div class="education-degree">Ingeniero Civil Industrial</div>
               <div class="education-institution">Universidad Adolfo Ibáñez</div>
-              <div class="education-details">Minor en Tecnologías de la Información</h4>
+              <div class="education-details">Minor en Tecnologías de la Información</div>
             </div>
             <div class="education-period">2014 - 2019</div>
           </div>
@@ -689,7 +710,7 @@ nav a:hover {
           <div class="education-header">
             <div>
               <div class="education-degree">International Baccalaureate Diploma (IBDP)</div>
-              <div class="education-institution">Saint Gabriel's School</h4>
+              <div class="education-institution">Saint Gabriel's School</div>
             </div>
             <div class="education-period">2000 - 2013</div>
           </div>
@@ -706,38 +727,10 @@ nav a:hover {
           </div>
         </div>
       </section>
+    </div>
 
-      <section id="about" class="section">
-        <h2>
-          <span class="section-icon">👨‍💻</span>
-          Sobre mí
-        </h2>
-        
-        <div class="about-content">
-          <p style="margin-bottom: 1.5rem;">
-            Me considero una persona responsable, detallista y creativa.
-            A lo largo de mi carrera he enfrentado desafíos en roles y rubros diversos, 
-            lo que me ha ayudado a ser un profesional adaptable con habilidades para 
-            abordar problemas de negocios, explorarlos e implementar soluciones basadas 
-            en un enfoque analítico y orientado a la ciencia de datos.
-          </p>
-          
-          <p style="margin-bottom: 1.5rem;">
-            Autodidacta y curioso, siempre busco aprender y mejorar. Apasionado por los desafíos, disfruto la tecnología, el deporte, la lectura, los juegos y vivir nuevas experiencias.
-          </p>
-
-          <div class="skill-category">
-            <h4>Experiencias Adicionales</h4>
-            <div style="color: #cbd5e1; line-height: 1.6; margin-top: 0.75rem;">
-              • Product Owner en Spurgeon<br>
-              • Participación en Desafío de programación RPA – EY<br>
-              • Tesorero federación de estudiantes – UAI<br>
-              • Certificación Open Waters PADI
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <!-- Proyectos - Ancho completo -->
+    <div class="main-content" style="margin-top: 2rem;">
       <section id="projects" class="section full-width">
         <h2>
           <span class="section-icon">🚀</span>
@@ -803,11 +796,74 @@ nav a:hover {
         </div>
       </section>
     </div>
+   
+    <!-- Sobre mí - Ancho completo, al final -->
+    <div class="main-content" style="margin-top: 2rem;">
+      <section id="about" class="section full-width">
+        <h2>
+          <span class="section-icon">👨‍💻</span>
+          Sobre mí
+        </h2>
+
+        <div class="about-content">
+          <p style="margin-bottom: 1.5rem;">
+            Me considero una persona responsable, detallista y creativa.
+            A lo largo de mi carrera he enfrentado desafíos en roles y rubros diversos, 
+            lo que me ha ayudado a ser un profesional adaptable con habilidades para 
+            abordar problemas de negocios, explorarlos e implementar soluciones basadas 
+            en un enfoque analítico y orientado a la ciencia de datos.
+          </p>
+
+          <!-- Duolingo streak -->
+          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; margin-bottom: 2rem;">
+            <p style="margin: 0;">
+              Autodidacta y curioso, siempre busco aprender y mejorar. Apasionado por los desafíos, disfruto la tecnología, el deporte, la lectura, los juegos y vivir nuevas experiencias.
+            </p>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; background: #f0f7d7; border-radius: 1rem; padding: 0.75rem 1.25rem; border: 2px solid #58cc02;">
+              <img src="images/duo_flames.jpg" alt="Duolingo streak icon" style="width: 80px; height: 80px; border-radius: 0.5rem;" />
+              <span style="font-weight: 600; color: #1cb0f6;">Racha de</span>
+              <span id="duolingo-streak" style="font-size: 2rem; font-weight: 800; color: #58cc02; font-family: 'Segoe UI', sans-serif;">690</span>
+              <span style="font-weight: 600; color: #1cb0f6;">días en Duolingo</span>
+            </div>
+          </div>
+
+          <!-- Experiencias adicionales -->
+          <div class="skill-category">
+            <h4>Experiencias Adicionales</h4>
+            <div style="color: #cbd5e1; line-height: 1.6; margin-top: 0.75rem;">
+              • Product Owner en Spurgeon<br>
+              • Participación en Desafío de programación RPA – EY<br>
+              • Tesorero federación de estudiantes – UAI<br>
+              • Certificación Open Waters PADI
+            </div>
+          </div>
+        </div>
+      </section>
+    </div> 
 
   </main>
     <footer>
       <p>© 2025 Cristóbal Middleton. Construido con paciencia e IA. Principalmente IA.</p>
     </footer>
   </div>
+
+<script>
+// Contador automático de racha de Duolingo
+function updateDuolingoStreak() {
+  const startDate = new Date('2022-08-22'); // Fecha de inicio de tu racha actual (ajusta según corresponda)
+  const today = new Date();
+  const diffTime = Math.abs(today - startDate);
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 690; // 690 es tu racha base actual
+  
+  const streakElement = document.getElementById('duolingo-streak');
+  if (streakElement) {
+    streakElement.textContent = diffDays;
+  }
+}
+
+// Actualizar al cargar la página
+updateDuolingoStreak();
+</script>
+
 </body>
 </html>
