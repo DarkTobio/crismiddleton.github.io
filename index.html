@@ -496,6 +496,75 @@ nav a:hover {
       font-size: 0.9rem;
       border-top: 1px solid rgba(71, 85, 105, 0.3);
     }
+
+    /* Duolingo streak estilizado para tema oscuro */
+    .duo-streak-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .duo-streak-content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      background: rgba(88, 204, 2, 0.1); /* verde traslúcido */
+      border-radius: 0.75rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #58cc02;
+      box-shadow: 0 0 8px rgba(88, 204, 2, 0.4);
+    }
+
+   .duo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .duo-icon:hover {
+      transform: scale(1.05);
+    }
+
+    .duo-text {
+      font-weight: 600;
+      color: #93c5fd;
+      font-size: 1rem;
+    }
+
+    .duo-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #58cc02;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .duo-streak-content {
+        gap: 0.25rem;
+        padding: 0.4rem 0.75rem;
+      }
+
+      .duo-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .duo-text {
+        font-size: 0.9rem;
+      }
+
+      .duo-number {
+        font-size: 1.4rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -511,8 +580,8 @@ nav a:hover {
                               Ingeniero Civil Industrial</p>
           <p class="bio">
             Lo curioso viene de fábrica, lo analítico lo elegí yo.
-            He trabajado en rubros variados, con desafíos aún más variados, pero siempre con el mismo enfoque: entender el problema, darle vueltas y resolver en base a datos.
-            Soy autodidacta, detallista y creativo. Me entusiasma lo complejo, lo desconocido y todo lo que combine tecnología, lógica y un buen reto.
+            He trabajado en rubros variados, con retos diferentes, pero siempre con el mismo enfoque: entender el problema, descomponerlo y resolver en base a datos.
+            Soy autodidacta, detallista y creativo. Me entusiasma lo complejo, lo desconocido y todo lo que combine tecnología, lógica y desafíos.
           </p>
           <div class="contact-info">
             <a href="mailto:cristobalimf@gmail.com" class="contact-item">
@@ -649,33 +718,42 @@ nav a:hover {
         
         <div class="skills-grid">
           <div class="skill-category">
-            <h4>Programación & Análisis</h4>
+            <h4>Ciencia de Datos, Automatización y Orquestación</h4>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
-              <span class="skill-tag">SQL Avanzado</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">Modelos Predictivos</span>
+              <span class="skill-tag">Evaluación de Modelos</span>
+              <span class="skill-tag">MLOps</span>
+              <span class="skill-tag">MLflow</span>
               <span class="skill-tag">Prefect</span>
-              <span class="skill-tag">ML Flow</span>
-              <span class="skill-tag">MS Office Avanzado</span>
+              <span class="skill-tag">APIs REST</span>
+              <span class="skill-tag">Git</span>
             </div>
           </div>
 
           <div class="skill-category">
             <h4>Visualización & BI</h4>
             <div class="skill-tags">
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Amazon Quicksight</span>
               <span class="skill-tag">Tableau</span>
               <span class="skill-tag">Power BI</span>
-              <span class="skill-tag">Quicksight</span>
+              <span class="skill-tag">MS Excel</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <h4>Habilidades Blandas</h4>
+            <h4>Habilidades Personales y Colaborativas</h4>
             <div class="skill-tags">
-              <span class="skill-tag">Análisis de datos</span>
+              <span class="skill-tag">Análisis crítico</span>
               <span class="skill-tag">Resolución de problemas</span>
               <span class="skill-tag">Comunicación efectiva</span>
               <span class="skill-tag">Adaptabilidad</span>
               <span class="skill-tag">Trabajo en equipo</span>
+              <span class="skill-tag">Pensamiento lógico</span>
             </div>
           </div>
 
@@ -683,7 +761,8 @@ nav a:hover {
             <h4>Idiomas</h4>
             <div class="skill-tags">
               <span class="skill-tag">Español Nativo</span>
-              <span class="skill-tag">Inglés C1</span>
+              <span class="skill-tag">Inglés C1 (IELTS - IBDP)</span>
+              <span class="skill-tag">Francés básico (Duolingo)</span>
             </div>
           </div>
         </div>
@@ -695,17 +774,42 @@ nav a:hover {
           Educación
         </h2>
         
+        <!-- Educación Formal -->
         <div class="education-item">
           <div class="education-header">
             <div>
-              <div class="education-degree">Ingeniero Civil Industrial</div>
+              <div class="education-degree">Ingeniería Civil Industrial</div>
               <div class="education-institution">Universidad Adolfo Ibáñez</div>
               <div class="education-details">Minor en Tecnologías de la Información</div>
             </div>
             <div class="education-period">2014 - 2019</div>
           </div>
         </div>
-
+        
+        <!-- Especializaciones Profesionales -->
+        <div class="education-item">
+          <div class="education-header">
+            <div>
+              <div class="education-degree">Machine Learning Specialization</div>
+              <div class="education-institution">Stanford Online - DeepLearning.AI</div>
+              <div class="education-details">100+ horas • Especialización completa</div>
+            </div>
+            <div class="education-period">2024-2025</div>
+          </div>
+        </div>
+        
+        <div class="education-item">
+          <div class="education-header">
+            <div>
+              <div class="education-degree">Google Machine Learning Bootcamp</div>
+              <div class="education-institution">Google via Coursera</div>
+              <div class="education-details">Bootcamp intensivo de 3 meses</div>
+            </div>
+            <div class="education-period">2022</div>
+          </div>
+        </div>
+        
+        <!-- Educación Secundaria -->
         <div class="education-item">
           <div class="education-header">
             <div>
@@ -715,12 +819,11 @@ nav a:hover {
             <div class="education-period">2000 - 2013</div>
           </div>
         </div>
-
+        
+        <!-- Certificaciones Adicionales -->
         <div class="skill-category" style="margin-top: 1.5rem;">
-          <h4>Cursos y Certificaciones</h4>
+          <h4>Certificaciones Complementarias</h4>
           <div style="color: #cbd5e1; line-height: 1.6; margin-top: 0.75rem;">
-            • Stanford Machine Learning Specialization (en curso)<br>
-            • Google Machine Learning Bootcamp (2022)<br>
             • Certificado Scrum Foundation Professional<br>
             • Python UC y DataCamp<br>
             • Adobe Premiere Pro CC
@@ -806,35 +909,56 @@ nav a:hover {
         </h2>
 
         <div class="about-content">
-          <p style="margin-bottom: 1.5rem;">
-            Me considero una persona responsable, detallista y creativa.
-            A lo largo de mi carrera he enfrentado desafíos en roles y rubros diversos, 
-            lo que me ha ayudado a ser un profesional adaptable con habilidades para 
-            abordar problemas de negocios, explorarlos e implementar soluciones basadas 
-            en un enfoque analítico y orientado a la ciencia de datos.
+          <p style="margin-bottom: 1rem;">
+            ¡Hola! Mi nombre es Cris y acabas de llegar a mi sección favorita, donde hablo de la parte más real de mí y te cuento un poco de todo: me gustan mucho los animales, probar comidas, leer, escribir, jugar, "deportear", y muchas cosas más.
           </p>
+          
+          <p style="margin-bottom: 1rem;">
+            Son muchas más las cosas que me gustan que las que no. Empezando por los animales, he tenido perros, gatos, hámsters, un cuy y hasta una <a href="https://es.wikipedia.org/wiki/Nymphicus_hollandicus" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">ninfa</a> llamada Pollito.
+          </p>
+          
+          <p style="margin-bottom: 1rem;">
+            Respecto a probar comidas, he experimentado varias curiosidades, desde cocodrilo, <a href="https://es.wikipedia.org/wiki/Haggis" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">haggis</a> escocés, <a href="https://es.wikipedia.org/wiki/Natt%C5%8D" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">natto</a>, <a href="https://es.wikipedia.org/wiki/Durio" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">durian</a> y hasta cuy frito (no, no era el mío).
+          </p>
+          
+          <p style="margin-bottom: 1rem;">
+            He tenido la suerte de viajar harto, así que he aprovechado de probar un poco de todo, pero mi memoria para nombres es tan mala que no voy a poder darte muchas recomendaciones específicas (es más, tuve que googlear para recordar el "<a href="https://es.wikipedia.org/wiki/Natt%C5%8D" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">natto</a>", el "<a href="https://es.wikipedia.org/wiki/Durio" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">durian</a>" y el "<a href="https://es.wikipedia.org/wiki/Haggis" target="_blank" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">haggis</a>"). Para el resto, siempre existe Google.
+          </p>
+          
+          <p style="margin-bottom: 1rem;">
+            Llevaba casi 4 años probando roles en áreas de BI/analítica sin estar convencido, así que me fui de viaje por casi 1 año y dos meses después, en agosto de 2024, empecé con el rol de Data Scientist, que por fin puedo decir con certeza: me gusta un montón. Me encanta hacer proyectos variados, enfocarme y buscar formas de resolver problemas hasta dar con resultados útiles.
+          </p>
+          
+          <p style="margin-bottom: 1rem;">
+            Aquí viene un disclaimer: en general no me sé los códigos de Python de memoria. Vengo "entrando" al mundo de la ciencia de datos y debo decir que me encanta, pero no creo alcanzar la proficiencia que tengo con SQL en al menos un par de años. Culpo a los LLM en gran medida. Y aprovecho de agradecerles, en caso de que estén leyendo.
+          </p>
+          
+          <p style="margin-bottom: 0;">
+            Ahora, como te venía diciendo, me gustan mucho los proyectos, así que te dejo el link a un <a href="./game.html" style="color: #60a5fa; text-decoration: none; border-bottom: 1px dotted #60a5fa;">proyecto de juego</a> que estoy armando, y probablemente siga en desarrollo y mejora continua por mucho tiempo.
+          </p>
+        </div>
 
-          <!-- Duolingo streak -->
-          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; margin-bottom: 2rem;">
-            <p style="margin: 0;">
-              Autodidacta y curioso, siempre busco aprender y mejorar. Apasionado por los desafíos, disfruto la tecnología, el deporte, la lectura, los juegos y vivir nuevas experiencias.
+          <!-- Duolingo streak compacto y responsivo -->
+          <div class="duo-streak-box">
+            <p style="margin-bottom: 0.75rem;">
+              Además de eso, llevo un montón de tiempo aprendiendo francés. No soy bueno en ello, pero al menos sí soy constante.
             </p>
-            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; background: #f0f7d7; border-radius: 1rem; padding: 0.75rem 1.25rem; border: 2px solid #58cc02;">
-              <img src="images/duo_flames.jpg" alt="Duolingo streak icon" style="width: 80px; height: 80px; border-radius: 0.5rem;" />
-              <span style="font-weight: 600; color: #1cb0f6;">Racha de</span>
-              <span id="duolingo-streak" style="font-size: 2rem; font-weight: 800; color: #58cc02; font-family: 'Segoe UI', sans-serif;">690</span>
-              <span style="font-weight: 600; color: #1cb0f6;">días en Duolingo</span>
+            <div class="duo-streak-content">
+              <img src="images/duo_flames.jpg" alt="Duolingo flame icon" class="duo-icon" />
+              <span class="duo-text">Racha de</span>
+              <span id="duolingo-streak" class="duo-number">690</span>
+              <span class="duo-text">días en Duo</span>
             </div>
           </div>
 
           <!-- Experiencias adicionales -->
           <div class="skill-category">
-            <h4>Experiencias Adicionales</h4>
+            <h4>Te comparto algunas experiencias adicionales></h4>
             <div style="color: #cbd5e1; line-height: 1.6; margin-top: 0.75rem;">
               • Product Owner en Spurgeon<br>
-              • Participación en Desafío de programación RPA – EY<br>
-              • Tesorero federación de estudiantes – UAI<br>
-              • Certificación Open Waters PADI
+              • Participación en Desafío de programación RPA - EY<br>
+              • Tesorero federación de estudiantes UAI<br>
+              • Certificación PADI Open Water Diver
             </div>
           </div>
         </div>
@@ -848,15 +972,20 @@ nav a:hover {
   </div>
 
 <script>
-// Contador automático de racha de Duolingo
   function updateDuolingoStreak() {
-    const startDate = new Date("2022-08-22"); // Ajusta esta fecha según el inicio real
+    // Cambia esta fecha al último día donde SABES que tenías un número exacto de racha
+    const baseDate = new Date("2025-07-27"); // ejemplo: 1 de octubre 2023
+    const baseStreak = 691; // la cantidad de días que tenías en esa fecha
+
     const today = new Date();
-    const diffTime = Math.abs(today - startDate);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    const streakElement = document.getElementById("duolingo-streak");
-    if (streakElement) {
-      streakElement.textContent = diffDays;
+    const diffTime = today - baseDate;
+    const daysPassed = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    const streak = baseStreak + daysPassed;
+
+    const el = document.getElementById("duolingo-streak");
+    if (el) {
+      el.textContent = streak;
     }
   }
 
