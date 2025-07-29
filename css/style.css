@@ -103,12 +103,16 @@ header {
   line-height: 1.6;
 }
 
-.cv-links,
-.contact-info {
+.cv-links {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.cv-links .contact-item {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .contact-item {
