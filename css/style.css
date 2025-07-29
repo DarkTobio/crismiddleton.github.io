@@ -53,7 +53,7 @@ header {
     color: white;
     border: 3px solid rgba(59, 130, 246, 0.3);
     flex-shrink: 0;
-    background-image: url('../images/profile.jpeg');
+    background-image: url('../images/profile.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -64,6 +64,67 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.profile-grid {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0;
+  margin: 0;  
+  flex: 1;
+  margin-bottom: 0rem;
+  border-bottom: none;
+}
+
+.profile-card {
+  background-color: rgba(30, 41, 59, 0.7); /* fondo oscuro translúcido */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 0rem; /* o incluso 0.5rem si lo quieres muy compacto */
+}
+
+.profile-card .bio {
+  margin-bottom: 1.25rem;
+  color: #e2e8f0; /* texto claro */
+  line-height: 1.6;
+}
+
+.cv-links,
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-item {
+  background: rgba(148, 163, 184, 0.15); /* botón con fondo suave */
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #f1f5f9;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.contact-item:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .bio {
@@ -86,7 +147,8 @@ background-clip: text;
 .subtitle {
     font-size: 1.25rem;
     color: #94a3b8;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
     font-weight: 500;
 }
 
